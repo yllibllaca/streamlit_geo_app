@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from apps import home, gjilan_buildings, upload, trashegimia_kulturore  # import your app modules here
+from apps import home, gjilan_buildings, upload, trashegimia_kulturore, pronat_e_legalizuara  # import your app modules here
 
 st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
 
@@ -9,9 +9,10 @@ st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
 
 apps = [
     {"func": home.app, "title": "Home", "icon": "house"},
-    {"func": gjilan_buildings.app, "title": "Ndertesat ne Gjilan", "icon": "map"},
+    # {"func": gjilan_buildings.app, "title": "Ndertesat ne Gjilan", "icon": "map"},
     {"func": upload.app, "title": "Upload", "icon": "cloud-upload"},
     {"func": trashegimia_kulturore.app, "title": "Trashegimia kulturore", "icon": "house"},
+     {"func": pronat_e_legalizuara.app, "title": "Ndertesat ne Gjilan", "icon": "map"},
 ]
 
 titles = [app["title"] for app in apps]
