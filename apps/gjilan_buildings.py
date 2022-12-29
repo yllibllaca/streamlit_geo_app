@@ -21,7 +21,7 @@ def app():
 
     st.text(filepaths)
 
-    m = leafmap.Map(minimap = True, draw_export = True)
+    m = leafmap.Map(minimap = True, draw_export = True, png_enabled = True)
     m.add_geojson(filepaths[kati], info_mode = 'on_click', layer_name = f'kati {kati}')
     
     m.fit_bounds(m.get_bounds(), padding=(30, 30))
