@@ -18,7 +18,7 @@ def app():
     
     m.add_basemap("HYBRID")
 
-    m.add_gdf(dataset)
+    m.add_gdf(dataset, info_mode = 'on_click')
     
     m.fit_bounds(m.get_bounds(), padding=(30, 30))
 
