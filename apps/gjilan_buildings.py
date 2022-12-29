@@ -17,11 +17,11 @@ def app():
 
     filepaths = dict(zip(file_ref, file_names))
     
-    kati = st.slider(label = 'caktoni katin', min_value = 1, max_value = 10, step = 1)
+    kati = st.slider(label = 'caktoni katin', min_value = 1, max_value = len(filepaths), step = 1, )
 
     st.text(filepaths)
 
-    m = leafmap.Map()
+    m = leafmap.Map(minimap = True, draw_export = True)
     m.add_geojson(filepaths[kati], info_mode = 'on_click', layer_name = f'kati {kati}')
     
     m.fit_bounds(m.get_bounds(), padding=(30, 30))
